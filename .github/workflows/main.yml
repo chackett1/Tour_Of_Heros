@@ -1,12 +1,13 @@
-name: Artifacts
+name: End-to-end tests with server and Artifacts
 on: [push]
 jobs:
   cypress-run:
     runs-on: ubuntu-20.04
-    name: Artifacts
     steps:
-      - uses: actions/checkout@v2
-      - uses: cypress-io/github-action@v2
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Cypress run
+        uses: cypress-io/github-action@v2
         with:
           start: npm start
       # after the test run completes
