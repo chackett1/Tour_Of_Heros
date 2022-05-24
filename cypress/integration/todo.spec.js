@@ -11,7 +11,7 @@ describe('My First Test', () => {
 
     cy.get('input[id="new-hero"]').type('New Hero')
 
-    cy.contains('button', 'Add hero')//.click()
+    cy.contains('button', 'Add hero').click()
 
     cy.contains('New Hero')
   })
